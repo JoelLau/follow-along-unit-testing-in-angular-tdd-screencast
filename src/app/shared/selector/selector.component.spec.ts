@@ -134,7 +134,7 @@ describe('SelectorComponent', () => {
       // Act (2): Click Select All Button
       selectAllButton.click();
       fixture.detectChanges();
-      await fixture.whenStable();
+      await fixture.whenStable(); // ngModel is async
 
       // Assert (2): Check Expected State
       const checkedCheckboxes = nativeElement.querySelectorAll(
